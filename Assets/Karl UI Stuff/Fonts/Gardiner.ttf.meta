@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d05e6ae5d336aec4f96e368a11377436
+timeCreated: 1500344787
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gardiner
+  fontNames:
+  - Gardiner
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7ededc85a6b9f3d4ab2e5d591f427f95, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
