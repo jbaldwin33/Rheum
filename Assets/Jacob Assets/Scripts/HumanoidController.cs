@@ -172,7 +172,6 @@ public class HumanoidController : Controller
         anim.SetFloat("speed", speedLerp / transform.lossyScale.y);
         anim.SetLayerWeight(1, animSplitLerp);
         anim.SetFloat("leftRight", leftRightLerp);
-        //anim.SetLayerWeight(2, animSplitLerp);
     }
 
     // Update is called once per frame

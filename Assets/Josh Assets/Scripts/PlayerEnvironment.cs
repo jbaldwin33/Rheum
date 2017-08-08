@@ -26,6 +26,7 @@ public class PlayerEnvironment : MonoBehaviour {
         CalcHealth();
         IsOnQuicksand();
         SeeIllusion();
+        Debug.Log(GetComponent<HumanoidController>().grounded);
     }
 
     public void AddSleep()
@@ -49,7 +50,7 @@ public class PlayerEnvironment : MonoBehaviour {
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.1f))
         {
             floortag = hit.collider.gameObject.tag;
-            if (floortag == "quicksand")
+            if (floortag == "quicksand" && GetComponent<HumanoidController>().grounded)
             {
                 onQuicksand = true;
                 GetComponent<Stats>().walkSpeed = 4;
@@ -60,6 +61,10 @@ public class PlayerEnvironment : MonoBehaviour {
                 GetComponent<Stats>().walkSpeed = 6;
             }
         }
+        /*else if (!GetComponent<HumanoidController>().grounded)
+        {
+            onQuicksand = false;
+        }*/
     }
 
     public void SeeIllusion()

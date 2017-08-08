@@ -6,7 +6,7 @@ public class Quicksand : MonoBehaviour {
 
     GameObject player;
     Vector3 originalPosition;
-    float y;
+    public float y;
     // Use this for initialization
     void Start() {
         player = GameObject.Find("Player");
@@ -16,7 +16,7 @@ public class Quicksand : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (player.GetComponent<PlayerEnvironment>().onQuicksand && !player.GetComponent<PlayerEnvironment>().isPushing)
+        if (player.GetComponent<PlayerEnvironment>().onQuicksand)
         {
             if (GetComponent<BoxCollider>().center.y > -0.3)
             {
@@ -26,8 +26,8 @@ public class Quicksand : MonoBehaviour {
         }
         else
         {
-            y = originalPosition.y;
-            GetComponent<BoxCollider>().center = new Vector3(0, y, 0);
+            //y = originalPosition.y;
+            GetComponent<BoxCollider>().center = new Vector3(0, 0, 0);
         }
     }
 
